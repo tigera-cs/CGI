@@ -1,0 +1,10 @@
+apiVersion: projectcalico.org/v3
+kind: HostEndpoint
+metadata:
+  name: master1
+  labels:
+    node-role.kubernetes.io/master: ""
+spec:
+  interfaceName: ens5
+  node: ip-10-0-1-20.ca-central-1.compute.internal
+  expectedIPs: ["10.0.1.20"]

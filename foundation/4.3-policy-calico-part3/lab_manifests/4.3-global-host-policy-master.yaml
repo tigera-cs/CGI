@@ -1,0 +1,14 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: k8s-outside2master-allowed-ports
+spec:
+  selector: node-role.kubernetes.io/master == ""
+  order: 300
+  ingress:
+  - action: Allow
+    protocol: TCP
+    destination:
+      ports: ["22", 4001, "10250:10256", 9099, 6443 ]
+  egress:
+  - action: Allow

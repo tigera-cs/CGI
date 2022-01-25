@@ -1,0 +1,10 @@
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: pool2-ipv4-ippool
+spec:
+  blockSize: 26
+  cidr: 10.48.128.0/24
+  ipipMode: Never
+  natOutgoing: true
+  nodeSelector: all()
