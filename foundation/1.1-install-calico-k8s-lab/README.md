@@ -82,7 +82,7 @@ watch kubectl get pods -n calico-system
 As an additional task, we will install calicoctl as binary in our bastion host:
 
 ```
-curl -o calicoctl -O -L  "https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl"
+curl -L https://github.com/projectcalico/calico/releases/download/v3.22.0/calicoctl-linux-amd64 -o calicoctl
 ```
 ```
 chmod +x calicoctl
