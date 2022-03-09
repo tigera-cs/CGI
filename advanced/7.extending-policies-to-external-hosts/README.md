@@ -23,7 +23,7 @@ Extract the cnx-node binary from the control1 node and transfer it to the bastio
 ssh control1
 ```
 ```
-sudo docker create --name container quay.io/tigera/cnx-node:v3.11.0
+sudo docker create --name container quay.io/tigera/cnx-node:v3.12.0
 sudo docker cp container:/bin/calico-node cnx-node
 sudo docker rm container
 ```
